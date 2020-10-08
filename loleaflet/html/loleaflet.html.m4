@@ -148,9 +148,6 @@ m4_ifelse(MOBILEAPP,[true],
            <div id="document-title-pencil"></div>
            <input id="document-name-input" type="text" disabled="true" style="display: none"/>
          </div>
-      </div>
-         <div class="office-share-button">
-       </div>
      </nav>
 
      <table id="toolbar-wrapper">
