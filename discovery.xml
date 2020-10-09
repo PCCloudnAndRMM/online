@@ -324,7 +324,7 @@
             <action name="view" ext="jpeg"/>
         </app>
         <app name="application/pdf">
-            <action name="view" ext="pdf"/>
+            <action name="edit" ext="pdf"/>
         </app>
 
         <app name="Capabilities">
