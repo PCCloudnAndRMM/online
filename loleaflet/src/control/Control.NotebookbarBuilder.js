@@ -89,7 +89,6 @@ L.Control.NotebookbarBuilder = L.Control.JSDialogBuilder.extend({
 		this._toolitemHandlers['.uno:EditAnnotation'] = function() {};
 		this._toolitemHandlers['.uno:ShowAllNotes'] = function() {};
 		this._toolitemHandlers['.uno:HideAllNotes'] = function() {};
-		this._toolitemHandlers['.uno:ShareDocument'] = function() {};
 		this._toolitemHandlers['.uno:EditDoc'] = function() {};
 		this._toolitemHandlers['.uno:AssignLayout'] = function() {};
 		this._toolitemHandlers['.uno:ConnectorToolbox'] = function() {};
