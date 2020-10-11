@@ -13,7 +13,7 @@
 
 // Default values and other shared data between processes.
 
-constexpr int DEFAULT_CLIENT_PORT_NUMBER = 9980;
+constexpr int DEFAULT_CLIENT_PORT_NUMBER = 443;
 
 constexpr int COMMAND_TIMEOUT_MS = 5000;
 constexpr int CHILD_TIMEOUT_MS = COMMAND_TIMEOUT_MS;
