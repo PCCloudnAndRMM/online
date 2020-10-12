@@ -114,8 +114,9 @@ L.Control.UIManager = L.Control.extend({
 			L.DomUtil.remove(L.DomUtil.get('presentation-controls-wrapper'));
 
 			if ((window.mode.isTablet() || window.mode.isDesktop())) {
+				var showRuler = this.getSavedStateOrDefault('ShowRuler');
 				var interactiveRuler = this.map.isPermissionEdit();
-				L.control.ruler({position:'topleft', interactive:interactiveRuler}).addTo(this.map);
+				L.control.ruler({position:'topleft', interactive:interactiveRuler, showruler: showRuler}).addTo(this.map);
 			}
 		}
 
@@ -184,11 +185,13 @@ L.Control.UIManager = L.Control.extend({
 	showRuler: function() {
 		$('.loleaflet-ruler').show();
 		$('#map').addClass('hasruler');
+		this.setSavedState('ShowRuler', true);
 	},
 
 	hideRuler: function() {
 		$('.loleaflet-ruler').hide();
 		$('#map').removeClass('hasruler');
+		this.setSavedState('ShowRuler', false);
 	},
 
 	toggleRuler: function() {
@@ -258,6 +261,39 @@ L.Control.UIManager = L.Control.extend({
 
 	isNotebookbarCollapsed: function() {
 		return $('#document-container').hasClass('tabs-collapsed');
+	},
+
+	// UI Defaults functions
+
+	showStatusBar: function() {
+		$('#document-container').css('bottom', this.documentBottom);
+		$('#presentation-controls-wrapper').css('bottom', this.presentationControlBottom);
+		$('#toolbar-down').show();
+		this.setSavedState('ShowStatusbar', true);
+	},
+
+	hideStatusBar: function(firstStart) {
+		if (!firstStart && !this.isStatusBarVisible())
+			return;
+
+		this.documentBottom = $('#document-container').css('bottom');
+		this.presentationControlBottom = $('#presentation-controls-wrapper').css('bottom');
+		$('#document-container').css('bottom', '0px');
+		$('#presentation-controls-wrapper').css('bottom','33px');
+		$('#toolbar-down').hide();
+		if (!firstStart)
+			this.setSavedState('ShowStatusbar', false);
+	},
+
+	toggleStatusBar: function() {
+		if (this.isStatusBarVisible())
+			this.hideStatusBar();
+		else
+			this.showStatusBar();
+	},
+
+	isStatusBarVisible: function() {
+		return $('#toolbar-down').is(':visible');
 	},
 
 	// Event handlers
@@ -335,6 +371,31 @@ L.Control.UIManager = L.Control.extend({
 				prevTop = 0 + diff;
 			}
 			obj.css({'top': String(prevTop) + 'px'});
+		}
+	},
+
+	setSavedState: function(name, state) {
+		localStorage.setItem('UIDefaults_' + this.map.getDocType() + '_' + name, state);
+	},
+
+	getSavedStateOrDefault: function(name) {
+		var retval = true;
+		var docType = this.map.getDocType();
+		var state = localStorage.getItem('UIDefaults_' + docType + '_' + name);
+		switch (state) {
+		case 'true':
+			return true;
+		case 'false':
+			return false;
+		default:
+			// no saved state; must check the UIDefaults
+			if (window.uiDefaults && window.uiDefaults[docType])
+				retval = window.uiDefaults[docType][name];
+
+			if (retval === undefined || retval === null)
+				return true;
+			else
+				return retval;
 		}
 	}
 });

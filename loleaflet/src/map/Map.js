@@ -282,9 +282,12 @@ L.Map = L.Evented.extend({
 				// Let the first page finish loading then load the sidebar.
 				var map = this;
 				setTimeout(function () {
-					// Show the sidebar by default, but not on mobile.
+					// Hide the sidebar on start if saved state or UIDefault is set.
 					if (window.mode.isDesktop() && !window.ThisIsAMobileApp) {
-						map._socket.sendMessage('uno .uno:SidebarShow');
+						var showSidebar = map.uiManager.getSavedStateOrDefault('ShowSidebar');
+
+						if (showSidebar === false)
+							map._socket.sendMessage('uno .uno:SidebarHide');
 					}
 					else if (window.mode.isChromebook()) {
 						// HACK - currently the sidebar shows when loaded,
@@ -1274,7 +1277,10 @@ L.Map = L.Evented.extend({
 				}
 			}
 		}
+		this.showCalcInputBar(deckOffset);
+	},
 
+	showCalcInputBar: function(deckOffset) {
 		if (this.dialog._calcInputBar && !this.dialog._calcInputBar.isPainting) {
 			var id = this.dialog._calcInputBar.id;
 			var calcInputbar = L.DomUtil.get('calc-inputbar');
