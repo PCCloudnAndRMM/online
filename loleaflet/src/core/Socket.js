@@ -529,6 +529,7 @@ L.Socket = L.Class.extend({
 			}
 			else if (command.errorKind === 'documentconflict')
 			{
+				var that = this;
 				storageError = errorMessages.storage.documentconflict;
 
 				vex.closeAll();
