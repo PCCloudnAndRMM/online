@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
 @keyframes vex-fadeout {
   0% {
     opacity: 1; }
   100% {
     opacity: 0; } }
-
+	.vex{ font-family: 'Open Sans', sans-serif;}
 /* Infobar */
 .vex-theme-bottom-right-corner .vex-dialog-message {
 	font-size: 1em;
@@ -19,7 +21,7 @@
 	/* TODO: remove specific z-index from our codebase
 	so that the following line can also be removed */
 	z-index: 2000;
-	background-color:#1c5fa814;
+	background-color:#000000d1;
 	min-height: 100%;
 	min-width: 100%;
 	position: absolute;
@@ -45,7 +47,13 @@
 	box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.15), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
 	border-radius: 4px;
 }
-
+.vex.vex-theme-plain .vex-content{    
+	width: 100% !important;
+    height: 100%;
+    overflow-y: scroll;
+	max-width: 900px;
+	font-family: 'Open Sans', sans-serif;
+}
 .vex-closing {
 	-webkit-animation: vex-fadeout .25s forwards;
 	animation: vex-fadeout .25s forwards;
