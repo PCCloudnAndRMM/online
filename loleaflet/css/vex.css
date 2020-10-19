@@ -48,12 +48,12 @@
 	border-radius: 4px;
 }
 .vex.vex-theme-plain .vex-content{    
-	width: 100% !important;
-    height: 100%;
-    overflow-y: scroll;
+	
+    overflow-y: auto;
 	max-width: 900px;
 	font-family: 'Open Sans', sans-serif;
 }
+
 .vex-closing {
 	-webkit-animation: vex-fadeout .25s forwards;
 	animation: vex-fadeout .25s forwards;
@@ -69,4 +69,71 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
+}
+
+.vex.vex-theme-plain .vex-content div#online-help {
+    height: calc(100vh - 330px);
+}
+.vex.vex-theme-plain .vex-content div#online-help .toc-h3 {
+    border: 1px solid #deeff7;
+    padding: 8px 5px 8px 10px;
+    margin: -1px 0 0;
+    border-width: 1px 1px 1px;
+}
+.vex.vex-theme-plain .vex-content div#online-help .toc-h3 button {
+    color: #0071bc;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    padding-left: 0px !important;
+    list-style: circle;
+}
+.vex.vex-theme-plain .vex-content div#online-help p.toc-h2 button {
+    color: #0071bc;
+    font-size: 19px;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    padding-left: 0px !important;
+    list-style: circle;
+    -webkit-text-stroke: thin;
+}
+.vex.vex-theme-plain .vex-content div#online-help p.toc-h2 {
+    border: 1px solid #deeff7;
+    padding: 8px 5px 8px 10px;
+    margin: -1px 0 0;
+    border-width: 1px 1px 1px;
+    background-color: #e9f8ff;
+}
+
+.vex.vex-theme-plain .vex-content div#online-help p {
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px;
+}
+.vex.vex-theme-plain .vex-content div#online-help p.toc-h2 button {
+    color: #0071bc;
+    font-size: 19px;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    padding-left: 0px !important;
+    list-style: circle;
+    -webkit-text-stroke: thin;
+}
+.vex.vex-theme-plain .vex-content div#online-help a>ul>li>p {
+    margin-left: 0px;
+}
+.vex.vex-theme-plain .vex-content div#online-help .screenshot img {
+    max-width: 700px;
+}
+
+.vex.vex-theme-plain .vex-content div#keyboard-shortcuts {
+    height: calc(100vh - 330px);
+}
+
+.vex.vex-theme-plain .vex-dialog-form .vex-dialog-message {
+    font-size: 16px;
 }
