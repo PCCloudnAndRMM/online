@@ -137,3 +137,19 @@
 .vex.vex-theme-plain .vex-dialog-form .vex-dialog-message {
     font-size: 16px;
 }
+.vex.vex-theme-plain .vex-content div#online-help>h1 {
+    margin: 0 0 40px;
+    font-size: 32px;
+}
+
+.vex.vex-theme-plain .vex-content div#online-help a>h3 {
+    color: #0071bc;
+}
+
+.vex.vex-theme-plain .vex-content div#online-help a>h4 {
+    color: #0089ca;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 0px 0 20px;
+    margin: 0;
+}
