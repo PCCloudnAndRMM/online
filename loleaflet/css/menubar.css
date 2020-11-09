@@ -110,7 +110,7 @@
     background: #ffffff; /* top-level menus remain greyish */
     border-left-color: transparent;
 }
-.lo-menu>li>a, .lo-menu>li>a.has-submenu{    padding:4px 6px !important;    font-size: 12px;    line-height: 15px;}
+.lo-menu>li>a, .lo-menu>li>a.has-submenu{    padding:4px 6px !important;    font-size: 14px ;    line-height: 15px; font-weight: 600;}
 .lo-menu>li>a:hover, .lo-menu>li>a:focus, .lo-menu>li>a:active, .lo-menu>li>a.highlighted {
     background: #fff;
     color: #000;
