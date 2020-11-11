@@ -1,1 +1,8 @@
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m7.5 3a3.5 4 0 0 0 -3.5 4 3.5 4 0 0 0 3.5 4 3.5 4 0 0 0 3.5-4 3.5 4 0 0 0 -3.5-4zm10.103516 0c-.384264 0-.713074.089228-.986328.2675781-.264715.1702431-.503317.4179148-.716797.7421875l-10.900391 15.9902344h1.3828125c.3415674 0 .6403087-.060038.8964844-.181641.2647149-.121603.5084498-.352873.7304687-.693359l10.9902344-16.125zm-10.103516 2a1.5 2 0 0 1 1.5 2 1.5 2 0 0 1 -1.5 2 1.5 2 0 0 1 -1.5-2 1.5 2 0 0 1 1.5-2zm9 8a3.5 4 0 0 0 -3.5 4 3.5 4 0 0 0 3.5 4 3.5 4 0 0 0 3.5-4 3.5 4 0 0 0 -3.5-4zm0 2a1.5 2 0 0 1 1.5 2 1.5 2 0 0 1 -1.5 2 1.5 2 0 0 1 -1.5-2 1.5 2 0 0 1 1.5-2z" fill="#696969"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<line fill="none" stroke="#696D72" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="15.8" y1="6.2" x2="8.2" y2="17.8"/>
+<ellipse fill="none" stroke="#696D72" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" cx="7.9" cy="7.7" rx="2.3" ry="2.9"/>
+<ellipse fill="none" stroke="#696D72" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" cx="16.1" cy="16" rx="2.3" ry="2.9"/>
+</svg>
