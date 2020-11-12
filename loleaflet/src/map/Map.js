@@ -409,7 +409,7 @@ L.Map = L.Evented.extend({
 		if (newModificationTime == 's') {
 			this.lastModIndicator.innerHTML = '<img style="vertical-align: bottom;margin-right: 5px;" src="images/saved.svg" width="16" height="16"><span>Saved</span>';
 		} else {
-			this.lastModIndicator.innerHTML = '<img style="vertical-align: bottom;margin-right: 5px;" src="images/saving.svg" width="16" height="16"><span>Saving</span>';
+			this.lastModIndicator.innerHTML = '<img class="file_saving" style="vertical-align: middle;margin-right: 5px;" src="images/saving.svg" width="16" height="16"><span>Saving</span>';
 		}
 		return;
 	},
