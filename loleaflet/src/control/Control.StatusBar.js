@@ -204,8 +204,8 @@ L.Control.StatusBar = L.Control.extend({
 				].concat(window.mode.isTablet() ? [] : [
 					{type: 'button',  id: 'zoomreset', img: 'zoomreset', hint: _('Reset zoom')},
 					{type: 'button',  id: 'zoomout', img: 'zoomout', hint: _UNO('.uno:ZoomMinus')},
-					{type: 'menu-radio', id: 'zoom', text: '100',
-						selected: 'zoom100',
+					{type: 'menu-radio', id: 'zoom', text: '120',
+						selected: 'zoom120',
 						mobile: false,
 						items: [
 							{ id: 'zoom20', text: '20', scale: 1},
@@ -248,7 +248,7 @@ L.Control.StatusBar = L.Control.extend({
 		});
 
 		this.map.on('zoomend', function () {
-			var zoomPercent = 100;
+			var zoomPercent = 120;
 			var zoomSelected = null;
 			switch (that.map.getZoom()) {
 			case 1:  zoomPercent =  20; zoomSelected = 'zoom20'; break;  // 0.2102
