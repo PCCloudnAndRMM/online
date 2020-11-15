@@ -21,7 +21,7 @@ L.Map = L.Evented.extend({
 	options: {
 		crs: L.CRS.Simple,
 		center: [0, 0],
-		zoom: 10,
+		zoom: 12,
 		// These zoom values are on a logarithmic scale. Each step away from the default 10
 		// (meaning 1 = 100%) is a multiplication by or division with pow(2,1/4). pow(2,1/4)
 		// is approximately 1.2. Thus 4 corresponds to six steps of division by pow(2,1/4) =
@@ -33,7 +33,7 @@ L.Map = L.Evented.extend({
 		fadeAnimation: false, // Not useful for typing.
 		trackResize: true,
 		markerZoomAnimation: true,
-		defaultZoom: 10,
+		defaultZoom: 12,
 		// 15 = 1440 twips-per-inch / 96 dpi.
 		// Chosen to match previous hardcoded value of 3840 for
 		// the current tile pixel size of 256.
