@@ -268,8 +268,8 @@ L.Map = L.Evented.extend({
 		// Unlike _docLoaded, this is flagged only once,
 		// after we receive status for the first time.
 		this._docLoadedOnce = false;
-                this.fitWidthZoom();
-                this.on('commandstatechanged', function(e) {
+		this.fitWidthZoom();
+		this.on('commandstatechanged', function (e) {
 			if (e.commandName === '.uno:ModifiedStatus') {
 				this._everModified = this._everModified || (e.state === 'true');
 
