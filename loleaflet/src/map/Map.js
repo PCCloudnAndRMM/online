@@ -312,8 +312,8 @@ L.Map = L.Evented.extend({
 				this._docLoadedOnce = this._docLoaded;
 				if (window.mode.isDesktop() && !window.ThisIsAMobileApp) {
 					this.zoomIn(1);
-					}
 				}
+			}
 		}, this);
 	},
 
