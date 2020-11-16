@@ -307,11 +307,13 @@ L.Map = L.Evented.extend({
 					//}
 				}, 200);
 			}
-			this.zoomIn(1);
 			// We have loaded.
 			if (!this._docLoadedOnce) {
 				this._docLoadedOnce = this._docLoaded;
-			}
+				if (window.mode.isDesktop() && !window.ThisIsAMobileApp) {
+					this.zoomIn(1);
+					}
+				}
 		}, this);
 	},
 

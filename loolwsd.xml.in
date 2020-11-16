@@ -140,22 +140,14 @@
 
     <storage desc="Backend storage">
         <filesystem allow="false" />
-        <wopi desc="Allow/deny wopi storage. Mutually exclusive with webdav." allow="true">
-            <host desc="Regex pattern of hostname to allow or deny." allow="true">rs-us-east-1\.edgedrive\.com</host>
-            <host desc="Regex pattern of hostname to allow or deny." allow="true">rs-us-west-1\.edgedrive\.com</host>
-	    <host desc="Regex pattern of hostname to allow or deny." allow="true">rs-ind-mum-1\.edgedrive\.com</host>
-		<host desc="Regex pattern of hostname to allow or deny." allow="true">10\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}</host>
-            <host desc="Regex pattern of hostname to allow or deny." allow="true">172\.1[6789]\.[0-9]{1,3}\.[0-9]{1,3}</host>
-            <host desc="Regex pattern of hostname to allow or deny." allow="true">172\.2[0-9]\.[0-9]{1,3}\.[0-9]{1,3}</host>
-            <host desc="Regex pattern of hostname to allow or deny." allow="true">172\.3[01]\.[0-9]{1,3}\.[0-9]{1,3}</host>
-            <host desc="Regex pattern of hostname to allow or deny." allow="true">192\.168\.[0-9]{1,3}\.[0-9]{1,3}</host>
-            <host desc="Regex pattern of hostname to allow or deny." allow="false">192\.168\.1\.1</host>
-            <max_file_size desc="Maximum document size in bytes to load. 0 for unlimited." type="uint">0</max_file_size>
-            <reuse_cookies desc="When enabled, cookies from the browser will be captured and set on WOPI requests." type="bool" default="false">false</reuse_cookies>
-            <locking desc="Locking settings">
-                <refresh desc="How frequently we should re-acquire a lock with the storage server, in seconds (default 15 mins) or 0 for no refresh" type="int" default="900">900</refresh>
-            </locking>
-        </wopi>
+      <wopi desc="Allow/deny wopi storage. Mutually exclusive with webdav." allow="true">
+        <host desc="Regex pattern of hostname to allow or deny." allow="true">.*\.zipdrive\.com</host>
+        <max_file_size desc="Maximum document size in bytes to load. 0 for unlimited." type="uint">0</max_file_size>
+        <reuse_cookies desc="When enabled, cookies from the browser will be captured and set on WOPI requests." type="bool" default="false">false</reuse_cookies>
+        <locking desc="Locking settings">
+          <refresh desc="How frequently we should re-acquire a lock with the storage server, in seconds (default 15 mins) or 0 for no refresh" type="int" default="900">900</refresh>
+        </locking>
+      </wopi>
         <webdav desc="Allow/deny webdav storage. Mutually exclusive with wopi." allow="false">
             <host desc="Hostname to allow" allow="false">rs-us-east-1.edgedrive.com rs-us-west-1.edgedrive.com rs-ind-mum-1.edgedrive.com</host>
         </webdav>
@@ -172,10 +164,10 @@
     <tile_cache_persistent desc="Should the tiles persist between two editing sessions of the given document?" type="bool" default="true">true</tile_cache_persistent>
 
     <admin_console desc="Web admin console settings.">
-        <enable desc="Enable the admin console functionality" type="bool" default="true">true</enable>
+        <enable desc="Enable the admin console functionality" type="bool" default="true">false</enable>
         <enable_pam desc="Enable admin user authentication with PAM" type="bool" default="false">false</enable_pam>
-        <username desc="The username of the admin console. Ignored if PAM is enabled.">admin</username>
-        <password desc="The password of the admin console. Deprecated on most platforms. Instead, use PAM or loolconfig to set up a secure password.">Test1234</password>
+        <username desc="The username of the admin console. Ignored if PAM is enabled."></username>
+        <password desc="The password of the admin console. Deprecated on most platforms. Instead, use PAM or loolconfig to set up a secure password."></password>
     </admin_console>
 
     <monitors desc="Addresses of servers we connect to on start for monitoring">
