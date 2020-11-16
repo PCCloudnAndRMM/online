@@ -64,8 +64,7 @@ var map = L.map('map', {
 	notWopiButIframe: notWopiButIframe,
 	alwaysActive: alwaysActive,
 	idleTimeoutSecs: idleTimeoutSecs,  // Dim when user is idle.
-	outOfFocusTimeoutSecs: outOfFocusTimeoutSecs,
-	zoom: 11// Dim after switching tabs.
+	outOfFocusTimeoutSecs: outOfFocusTimeoutSecs// Dim after switching tabs.
 });
 
 ////// Controls /////

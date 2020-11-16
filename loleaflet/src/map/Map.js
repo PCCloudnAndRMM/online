@@ -310,10 +310,7 @@ L.Map = L.Evented.extend({
 			if (!this._docLoadedOnce) {
 				this._docLoadedOnce = this._docLoaded;
 				if (window.mode.isDesktop() && !window.ThisIsAMobileApp) {
-					if (this._zoomed != true) {
-						this._zoomed = true;
-						this.zoomIn(1);
-					}
+					this.setZoom(11, this.options);
 				}
 			}
 		}, this);
