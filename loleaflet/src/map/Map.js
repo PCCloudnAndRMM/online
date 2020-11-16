@@ -302,11 +302,12 @@ L.Map = L.Evented.extend({
 				var map = this;
 				setTimeout(function () {
 					// Show the sidebar by default, but not on mobile.
-					if (window.mode.isDesktop() && !window.ThisIsAMobileApp) {
-						map._socket.sendMessage('uno .uno:SidebarHide');
-					}
+					//if (window.mode.isDesktop() && !window.ThisIsAMobileApp) {
+					map._socket.sendMessage('uno .uno:SidebarHide');
+					//}
 				}, 200);
 			}
+			this.zoomIn(1);
 			// We have loaded.
 			if (!this._docLoadedOnce) {
 				this._docLoadedOnce = this._docLoaded;
