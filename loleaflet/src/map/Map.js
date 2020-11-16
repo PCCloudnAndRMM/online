@@ -21,7 +21,7 @@ L.Map = L.Evented.extend({
 	options: {
 		crs: L.CRS.Simple,
 		center: [0, 0],
-		zoom: 12,
+		zoom: 10,
 		// These zoom values are on a logarithmic scale. Each step away from the default 10
 		// (meaning 1 = 100%) is a multiplication by or division with pow(2,1/4). pow(2,1/4)
 		// is approximately 1.2. Thus 4 corresponds to six steps of division by pow(2,1/4) =
@@ -268,8 +268,8 @@ L.Map = L.Evented.extend({
 		// Unlike _docLoaded, this is flagged only once,
 		// after we receive status for the first time.
 		this._docLoadedOnce = false;
-
-		this.on('commandstatechanged', function(e) {
+                this.fitWidthZoom();
+                this.on('commandstatechanged', function(e) {
 			if (e.commandName === '.uno:ModifiedStatus') {
 				this._everModified = this._everModified || (e.state === 'true');
 
