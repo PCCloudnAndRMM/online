@@ -309,7 +309,7 @@ L.Map = L.Evented.extend({
 			// We have loaded.
 			if (!this._docLoadedOnce) {
 				this._docLoadedOnce = this._docLoaded;
-				if (window.mode.isDesktop() && !window.ThisIsAMobileApp) {
+				if (!window.ThisIsAMobileApp) {
 					this.setZoom(11, this.options);
 				}
 			}
