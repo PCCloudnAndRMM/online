@@ -303,16 +303,14 @@ L.Map = L.Evented.extend({
 					// Show the sidebar by default, but not on mobile.
 					//if (window.mode.isDesktop() && !window.ThisIsAMobileApp) {
 					map._socket.sendMessage('uno .uno:SidebarHide');
+					this.setZoom(11, this.options);
 					//}
 				}, 200);
 			}
 			// We have loaded.
 			if (!this._docLoadedOnce) {
 				this._docLoadedOnce = this._docLoaded;
-				if (!window.ThisIsAMobileApp) {
-					this.setZoom(11, this.options);
-				}
-			}
+                        }
 		}, this);
 	},
 
