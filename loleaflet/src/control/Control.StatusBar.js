@@ -204,8 +204,8 @@ L.Control.StatusBar = L.Control.extend({
 				].concat(window.mode.isTablet() ? [] : [
 					{type: 'button',  id: 'zoomreset', img: 'zoomreset', hint: _('Reset zoom')},
 					{type: 'button',  id: 'zoomout', img: 'zoomout', hint: _UNO('.uno:ZoomMinus')},
-					{type: 'menu-radio', id: 'zoom', text: '100',
-						selected: 'zoom100',
+					{type: 'menu-radio', id: 'zoom', text: '120',
+						selected: 'zoom120',
 						mobile: false,
 						items: [
 							{ id: 'zoom20', text: '20', scale: 1},
