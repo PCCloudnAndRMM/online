@@ -52,7 +52,7 @@ L.Map.include({
 		this.fire('updatepermission', {perm : perm});
 
 		if (this._docLayer._docType === 'text') {
-			this.setZoom(10);
+			this.setZoom(11);
 		}
 
 	},

@@ -21,7 +21,7 @@ L.Map = L.Evented.extend({
 	options: {
 		crs: L.CRS.Simple,
 		center: [0, 0],
-		zoom: 10,
+		zoom: 11,
 		// These zoom values are on a logarithmic scale. Each step away from the default 10
 		// (meaning 1 = 100%) is a multiplication by or division with pow(2,1/4). pow(2,1/4)
 		// is approximately 1.2. Thus 4 corresponds to six steps of division by pow(2,1/4) =
