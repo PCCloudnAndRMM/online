@@ -294,7 +294,7 @@ L.Map = L.Evented.extend({
 			this.initializeModificationIndicator();
 
 			// Show sidebar.
-			this.zoomIn(1, this.options);
+                        this.setView(this.center);
 			if (this._docLayer && !this._docLoadedOnce &&
 				(this._docLayer._docType === 'spreadsheet' || this._docLayer._docType === 'text' || this._docLayer._docType === 'presentation')) {
 				// Let the first page finish loading then load the sidebar.
