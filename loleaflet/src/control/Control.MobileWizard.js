@@ -89,7 +89,7 @@ L.Control.MobileWizard = L.Control.extend({
 	},
 
 	_showWizardSidebar: function() {
-		this.map.showSidebar = true;
+		this.map.showSidebar = false;
 		this._refreshSidebar();
 	},
 
