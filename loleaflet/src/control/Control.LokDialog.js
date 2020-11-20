@@ -134,7 +134,8 @@ L.Control.LokDialog = L.Control.extend({
 	_currentDeck: null, // The sidebar.
 	_calcInputBar: null, // The Formula-Bar.
 
-	_docLoaded: function(e) {
+	_docLoaded: function (e) {
+		firstTime = '0';
 		if (!e.status) {
 			$('.lokdialog_container').remove();
 			$('.lokdialogchild-canvas').remove();
