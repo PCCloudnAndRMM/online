@@ -119,7 +119,8 @@ and dependencies (minified).
 			auto-adjust scrollbar dragger length
 			values: boolean
 			*/
-			autoDraggerLength:true,
+			autoDraggerLength: true,
+			autoHideScrollbar: false,
 			/*
 			auto-hide scrollbar when idle 
 			values: boolean
@@ -127,6 +128,7 @@ and dependencies (minified).
 				-------------------------------------
 				autoHideScrollbar			false
 			*/
+			autoExpandScrollbar: true,
 			/*
 			auto-expands scrollbar on mouse-over and dragging
 			values: boolean
@@ -324,7 +326,7 @@ and dependencies (minified).
 			scrollbar theme 
 			values: string (see CSS/plugin URI for a list of ready-to-use themes)
 			*/
-			theme:"light",
+			theme:"dark",
 			/*
 			user defined callback functions
 			*/
