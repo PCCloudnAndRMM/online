@@ -29,7 +29,7 @@ L.Control.Scroll = L.Control.extend({
 		var autoHideTimeout = null;
 		$('.scroll-container').mCustomScrollbar({
 			axis: 'yx',
-			theme: 'inset-2',
+			theme: 'inset-3-dark',
 			scrollInertia: 0,
 			advanced:{
 				autoExpandHorizontalScroll: true, /* weird bug, it should be false */
