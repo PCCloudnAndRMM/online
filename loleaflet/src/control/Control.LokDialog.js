@@ -11,7 +11,7 @@ L.WinUtil = {
 var firstTouchPositionX = null;
 var firstTouchPositionY = null;
 var previousTouchType = null;
-var firstTime = null;
+
 function updateTransformation(target) {
 	if (target !== null && target !== undefined) {
 		var value = [
@@ -995,8 +995,7 @@ L.Control.LokDialog = L.Control.extend({
 		if ((window.mode.isMobile() || window.mode.isTablet())
 		    && this._map._permission != 'edit')
 			return;
-		if (!firstTime) {
-			firstTime = '1';
+		if (id < 3) {
 			return;
 		}
 		$('#sidebar-dock-wrapper').css('display', 'block');
@@ -1054,16 +1053,11 @@ L.Control.LokDialog = L.Control.extend({
 			$('#' + strId + '-cursor').css({display: 'none'});
 
 			var panel = L.DomUtil.get('sidebar-panel');
-			if (firstTime)
-			{
-				if (width > 1)
-					$(panel).parent().show();
-				else
-					$(panel).parent().hide();
-			} else {
-				firstTime = '1';
+			if (width > 1)
+				$(panel).parent().show();
+			else
 				$(panel).parent().hide();
-			}
+			
 			// Render window.
 			this._sendPaintWindowRect(id);
 		} else {
