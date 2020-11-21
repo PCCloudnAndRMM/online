@@ -49,9 +49,9 @@ L.Control.PartsPreview = L.Control.extend({
 
 		$(this._partsPreviewCont).mCustomScrollbar({
 			axis: this._direction,
-			theme: 'dark-thick',
+			theme: 'light-thick',
 			scrollInertia: 0,
-			alwaysShowScrollbar: 1,
+			alwaysShowScrollbar: 2,
 			callbacks:{
 				whileScrolling: function() {
 					control._onScroll(this);
