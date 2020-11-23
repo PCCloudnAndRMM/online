@@ -151,7 +151,7 @@
 }
 .lo-menu>li#menu-last-mod, .lo-menu>li#menu-last-mod >a, .lo-menu>li#menu-last-mod >a>span {
     cursor: default !important;
-    font-size: 12px;
+    font-size: 14px;    font-weight: 300;
 }
 /* lo-menu customizations end */
 
